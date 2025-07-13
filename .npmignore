@@ -1,0 +1,6 @@
+.git
+node_modules/
+src/
+package-lock.json
+tsconfig.json
+tsup.config.ts
