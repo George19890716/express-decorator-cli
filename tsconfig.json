@@ -2,8 +2,6 @@
   "compilerOptions": {
     "target": "ES2018",
     "module": "CommonJS",
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
     "moduleResolution": "node",
     "declaration": true,
     "outDir": "./dist",
