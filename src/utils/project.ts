@@ -4,6 +4,7 @@ import fse from 'fs-extra';
 import inquirer from 'inquirer';
 import ora from 'ora';
 import path from 'path';
+import { getPacckageJsonPath } from './common';
  
 export const checkProjectExist = async (targetPath: string, projectName: string) => {
   if (fse.existsSync(targetPath)) {
@@ -31,6 +32,9 @@ export const generateProject = async (targetPath: string, projectName: string) =
     const templatePath = path.join(__dirname, '..', 'templates', 'express-spring-template');
     fse.copySync(templatePath, targetPath);
 
+    // Update name in package.json
+    updatePackageJson(targetPath, projectName);
+
     console.log('\n');
     generateProjectInfo(projectName);
     console.log('\n');
@@ -54,6 +58,16 @@ export const generateProject = async (targetPath: string, projectName: string) =
     console.error(chalk.red(`Error: ${e?.message ?? e}`));
     console.error(chalk.red('Error: Failed to create new project!'));
   }
+}
+
+export const updatePackageJson = (targetPath: string, projectName: string) => {
+  const pacckageJsonPath = getPacckageJsonPath(targetPath);
+  const packageData = fse.readFileSync(pacckageJsonPath, 'utf8');
+  fse.writeFileSync(
+    pacckageJsonPath, 
+    packageData.replace(/express-spring-template/, `${projectName}`), 
+    'utf8',
+  );
 }
 
 export const generateProjectInfo = (projectName: string) => {
