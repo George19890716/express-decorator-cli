@@ -3,7 +3,7 @@ import { execa } from 'execa';
 import fse from 'fs-extra';
 import inquirer from 'inquirer';
 import ora from 'ora';
-import path, { resolve } from 'path';
+import path from 'path';
  
 export const checkProjectExist = async (targetPath: string, projectName: string) => {
   if (fse.existsSync(targetPath)) {

@@ -6,6 +6,7 @@
     "Li Songjing <songjingcode@gmail.com>",
     "Yi Xuelian <ylian06@qq.com>"
   ],
+  "repository": "https://github.com/George19890716/express-decorator-cli",
   "main": "index.js",
   "bin": {
     "express-spring": "./bin/bin.js"
