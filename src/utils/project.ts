@@ -29,7 +29,7 @@ export const generateProject = async (targetPath: string, projectName: string) =
   try {
     const spinner = ora(`Creating new project ${projectName}...`).start();
 
-    const templatePath = path.join(__dirname, '..', 'templates', 'express-spring-template');
+    const templatePath = path.join(__dirname, '..', 'templates', 'project');
     fse.copySync(templatePath, targetPath);
 
     // Update name in package.json
