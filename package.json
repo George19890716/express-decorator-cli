@@ -1,6 +1,6 @@
 {
   "name": "express-spring-generator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Xu Ming <xumingxiaoming@163.com>",
   "description": "The quickest way to get started express application with express-spring decorators",
   "contributors": [
