@@ -4,7 +4,7 @@ import fse from 'fs-extra';
 import inquirer from 'inquirer';
 import ora from 'ora';
 import path from 'path';
-import { getPacckageJsonPath } from './common';
+import { getPacckageJsonPath } from './common.js';
  
 export const checkProjectExist = async (targetPath: string, projectName: string) => {
   if (fse.existsSync(targetPath)) {

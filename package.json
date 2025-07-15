@@ -8,6 +8,7 @@
   ],
   "repository": "https://github.com/George19890716/express-decorator-cli",
   "main": "index.js",
+  "type": "module",
   "bin": {
     "express-spring": "./bin/bin.js"
   },

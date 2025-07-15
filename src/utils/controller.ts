@@ -1,7 +1,7 @@
 import chalk from 'chalk';
 import fse from 'fs-extra';
 import path from 'path';
-import { getPacckageJsonPath } from './common';
+import { getPacckageJsonPath } from './common.js';
 
 export const getControllerName = (name: string) => {
   if (!name) return { fileName: 'Controller.ts', controllerName: '' };

@@ -1,2 +1,2 @@
-export { default as controllerCommand } from './controller';
-export { default as projectCommand } from './project';
+export { default as controllerCommand } from './controller.js';
+export { default as projectCommand } from './project.js';

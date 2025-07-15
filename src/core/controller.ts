@@ -1,4 +1,4 @@
-import { checkInProject, checkControllerExist, generateController } from '../utils';
+import { checkInProject, checkControllerExist, generateController } from '../utils/index.js';
 
 const action = async (name: string) => {
   const projectPath = process.cwd();

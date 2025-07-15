@@ -1,7 +1,7 @@
 import { program } from 'commander';
 import fse from 'fs-extra';
 import path from 'path';
-import { controllerCommand, projectCommand } from './core';
+import { controllerCommand, projectCommand } from './core/index.js';
 
 const startup = async () => {
   // Add 'controller' command for express spring cli

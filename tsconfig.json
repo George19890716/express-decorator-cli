@@ -1,11 +1,11 @@
 {
   "compilerOptions": {
-    "target": "ES2018",
-    "module": "CommonJS",
-    "moduleResolution": "node",
+     "target": "ES2018",
+    "module": "nodenext",
+    "moduleResolution": "NodeNext",
     "declaration": true,
     "outDir": "./dist",
     "esModuleInterop": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
   }
 }
