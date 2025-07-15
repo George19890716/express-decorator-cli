@@ -8,50 +8,58 @@ import {
   DeleteMapping
 } from 'express-spring';
 
-/*
- * Tips: using parameter decorators to simplify the implementation api
- * RequestBody: get payload of post / put / patch http request
- *   example: 
- *     postExample(@RequestBody payload) {...}  // payload will be the body of post request
- * RequestHeader: get entire request header or one single attribute from request header
- *   example:
- *     getExample(
- *       @RequestHeader header,       // get entire request header
- *       @RequestHeader('connection') // get attribute 'connection' from request header
- *     )      
- * RequestParam: get entire query params or specific query parameter
- *   example with queries "?id=1&name=n":
- *   getExample(
- *     @RequestParam queries,   // get entire query params of http request{ id: 1, name: 'n' }
- *     @RequestParam('id') id   // get id from query params only
- *   )  
- */
+// Examples of implement Restful API with url http://localhost:404/example
 
 @RestController
 @RequestMapping('/')
 export class ExampleController {
-  @GetMapping('/example')
+  /* 
+   * Restful api with GET method
+   * URL: http://localhost:404/example
+   * Response: { message: 'Here is the response of this Get Request!' }
+   */
+  @GetMapping('/example') 
   getExample() {
     return { message: 'Here is the response of this Get Request!' };
   }
 
+  /* 
+   * Restful api with POST method
+   * URL: http://localhost:404/example
+   * Response: { message: 'Here is the response of this Post Request!' }
+   */
   @PostMapping('/example')
   postExample() {
     return { message: 'Here is the response of this Post Request!' };
   }
 
+  /* 
+   * Restful api with PUT method
+   * URL: http://localhost:404/example
+   * Response: { message: 'Here is the response of this Put Request!' }
+   */
   @PutMapping('/example')
   putExample() {
     return { message: 'Here is the response of this Put Request!' };
   }
 
+  /* 
+   * Restful api with PATCH method
+   * URL: http://localhost:404/example
+   * Response: { message: 'Here is the response of this Patch Request!' }
+   */
   @PatchMapping('/example')
   patchExample() {
-    return 'Here is the response of this Patch Request!';
+    return { message: 'Here is the response of this Patch Request!' };
   }
 
+  /* 
+   * Restful api with DELETE method
+   * URL: http://localhost:404/example
+   * Response: { message: 'Here is the response of this Delete Request!' }
+   */
   @DeleteMapping('/example')
   deleteExample() {
-    return 'Here is the response of this Delete Request!';
+    return { message: 'Here is the response of this Delete Request!' };
   }
 }

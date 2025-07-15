@@ -2,6 +2,7 @@
   "name": "express-spring-generator",
   "version": "1.0.0",
   "author": "Xu Ming <xumingxiaoming@163.com>",
+  "description": "The quickest way to get started express application with express-spring decorators",
   "contributors": [
     "Li Songjing <songjingcode@gmail.com>",
     "Yi Xuelian <ylian06@qq.com>"
@@ -15,7 +16,17 @@
   "scripts": {
     "build": "tsup"
   },
-  "keywords": [],
+  "keywords": [
+    "generator",
+    "cli",
+    "decorator",
+    "express",
+    "spring",
+    "http",
+    "restful",
+    "app",
+    "api"
+  ],
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^24.0.10",

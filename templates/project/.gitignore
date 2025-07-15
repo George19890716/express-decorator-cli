@@ -1,0 +1,15 @@
+build/
+node_modules/
+package-lock.json
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# VS Code
+.vscode/
+
+#Macos
+**/.DS_Store

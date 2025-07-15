@@ -27,13 +27,14 @@
 ## Commands and Options
   Commands:
   ```bash
-  controller <controller-name>    Generate a rest controller in express-spring project
-  new [options] <project-name>    Create a new express-spring project named <project-name>
+  controller <controller-name>    Generate a restful controller in express-spring application
+  new [options] <project-name>    Create a new express-spring application
   ```
   Options:
   ```bash
   -v, --version        output the version number
   -h, --help           display help for command
+  -f, --force          Overwrites existing directory without confirmation when creating new project
   ```
 
 ## Developers

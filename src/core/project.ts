@@ -18,7 +18,7 @@ const action = async (projectName: string, option: any) => {
 export default {
   action,
   command: 'new <project-name>',
-  description: 'Create a new express-spring project named <project-name>',
+  description: 'Create a new express-spring application',
   option: '-f, --force',
   optionDescription: 'overwrite the existed project'
 }
