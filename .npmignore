@@ -4,3 +4,15 @@ src/
 package-lock.json
 tsconfig.json
 tsup.config.ts
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# VS Code
+.vscode/
+
+#Macos
+**/.DS_Store

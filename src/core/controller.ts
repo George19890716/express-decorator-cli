@@ -10,5 +10,5 @@ const action = async (name: string) => {
 export default {
   action,
   command: 'controller <controller-name>',
-  description: 'Generate a rest controller in express-spring project',
+  description: 'Generate a rest controller with <controller-name> in express-spring project',
 }
