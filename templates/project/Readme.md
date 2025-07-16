@@ -86,7 +86,7 @@ npm run startup
   ```
 
   ### Using Parameter Decorators:
-  @RequestBody: Get Payload of Post / Put / Patch Http Request
+  @RequestBody: Extracts the entire HTTP request body (typically JSON) and binds it to method parameters
   ```bash
   @PostMapping('/parameter-body')
   getPayload(@RequestBody payload) {
@@ -98,7 +98,7 @@ npm run startup
   }
   ```
 
-  @RequestHeader: Get whole Request Header or one specific attribute in Request Header
+  @RequestHeader: Extracts values from HTTP request headers and binds them to method parameters
   ```bash
   @GetMapping('/parameter-header')
   getHeader(
@@ -114,7 +114,7 @@ npm run startup
   }
   ```
 
-  @RequestHeader: Get whole Query Parameters or one specific attribute in Query Parameters
+  @RequestParam: Extracts query parameters from URL or form data and binds them to method parameters
   ```bash
   @GetMapping('/parameter-query')
   getQuery(
@@ -128,6 +128,18 @@ npm run startup
      */
     return queries;
   } 
+  ```
+
+  @PathVariable: Extract values from URI template patterns defined with {variableName} placeholders.
+  ```bash
+  @DeleteMapping('/parameter/{id}')
+  deleteParameter(@PathVariable('id') id) {
+    /* 
+     * For the DELETE API http://localhost:404/parameter/1
+     * Value of "id" will be '1'
+     */
+    return { id };
+  }
   ```
 
 
