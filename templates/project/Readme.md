@@ -11,11 +11,19 @@ npm run startup
   ├── controllers/                # Folder including all Restful Controllers
   │   ├── ExampleController.ts    # Example of using express-spring decorators to implement Restful API
   │   ├── index.ts                # Index file to export all Restful Controllers
+  ├── application.config.json     # Configuration file for the application
   ├── main.ts                     # Main file to implement express-spring application
   ├── README.md                   # Project documentation
   └── package.json                # NPM dependencies and scripts
   └── tsconfig.json               # Typescript configuration file
   ```
+
+## Application Configuration
+  Entrie configuration can be modified in application.config.json (only "Port" can be changed in current version).
+
+  ### Port
+  Default value is 404, and the valid range is from 0 to 50,000 inclusive.
+
 
 ## Example of using express-spring decorators
   ### Example in [GitHub](https://github.com/George19890716/express-spring-example) 

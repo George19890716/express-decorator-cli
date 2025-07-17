@@ -19,6 +19,11 @@
   express-spring new example
   ```
 
+  Input the number of port or using default value (Supported in version 1.1.0 of generator):
+  ```bash
+  ? Please input port of the application (404)
+  ```
+
   Start application at http://localhost:404/:
   ```bash
   npm run startup
