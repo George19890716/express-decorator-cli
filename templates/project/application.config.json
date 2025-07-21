@@ -1,3 +1,4 @@
 {
-    "Port": 404
+    "Port": 404,
+    "ValuesFolder": "values"
 }

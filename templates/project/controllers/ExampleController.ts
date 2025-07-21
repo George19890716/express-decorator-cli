@@ -3,9 +3,7 @@ import {
   RequestMapping, 
   GetMapping, 
   PostMapping,
-  PutMapping,
-  PatchMapping,
-  DeleteMapping
+  Value,
 } from 'express-spring';
 
 // Examples of implement Restful API with url http://localhost:404/example
@@ -13,14 +11,17 @@ import {
 @RestController
 @RequestMapping('/')
 export class ExampleController {
+  @Value('example.message')
+  private message: any;  // Using Value decorator to extract the data
+
   /* 
    * Restful api with GET method
    * URL: http://localhost:404/example
-   * Response: { message: 'Here is the response of this Get Request!' }
+   * Response: { "value": "This is an example of using Value decorator!" }
    */
   @GetMapping('/example') 
   getExample() {
-    return { message: 'Here is the response of this Get Request!' };
+    return this.message;
   }
 
   /* 
@@ -31,35 +32,5 @@ export class ExampleController {
   @PostMapping('/example')
   postExample() {
     return { message: 'Here is the response of this Post Request!' };
-  }
-
-  /* 
-   * Restful api with PUT method
-   * URL: http://localhost:404/example
-   * Response: { message: 'Here is the response of this Put Request!' }
-   */
-  @PutMapping('/example')
-  putExample() {
-    return { message: 'Here is the response of this Put Request!' };
-  }
-
-  /* 
-   * Restful api with PATCH method
-   * URL: http://localhost:404/example
-   * Response: { message: 'Here is the response of this Patch Request!' }
-   */
-  @PatchMapping('/example')
-  patchExample() {
-    return { message: 'Here is the response of this Patch Request!' };
-  }
-
-  /* 
-   * Restful api with DELETE method
-   * URL: http://localhost:404/example
-   * Response: { message: 'Here is the response of this Delete Request!' }
-   */
-  @DeleteMapping('/example')
-  deleteExample() {
-    return { message: 'Here is the response of this Delete Request!' };
   }
 }
