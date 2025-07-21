@@ -42,8 +42,38 @@
   -f, --force          Overwrites existing directory without confirmation when creating new project
   ```
 
+  ## Change log
+  In [express-spring](https://www.npmjs.com/package/express-spring) 1.3.0
+
+  ### "Value" decorator will be supported.
+
+  JSON file in "values/example/message.json"
+  ```bash
+  {
+    "value": "This is an example of using Value decorator!"
+  }
+  ```
+
+  Extract data from "values/example/message.json" in Rest Controller
+  ```bash
+  @RestController
+  export class ValueController {
+    @Value('example.message.value')
+    private value: string; 
+
+    @GetMapping('/value')
+    getValue() {
+      // "this.value" will be "This is an example of using Value decorator!"
+      return this.value;
+    }
+  }
+  ```
+
+  ### "ValuesFolder" can be set in application.config.json 
+  Default value is "values", to define the folder for storing JSON format data and extract them by "Value" decorator.
+
 ## Developers
-  The original author of Express Spring is [Xu Ming](https://github.com/George19890716)
+  The original author of Express Spring Generator is [Xu Ming](https://github.com/George19890716)
 
   List of all contributors
   * [Li Songjing](https://github.com/lisongjing)

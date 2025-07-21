@@ -88,8 +88,9 @@ export const updateConfiguration = (targetPath: string, { port }) => {
 }
 
 export const generateProjectInfo = (projectName: string) => {
+  console.log(chalk.green('Create'), `${projectName}/controllers/ExampleController.ts`);
   console.log(chalk.green('Create'), `${projectName}/controllers/index.ts`);
-  console.log(chalk.green('Create'), `${projectName}/controllers/example-controller.ts`);
+  console.log(chalk.green('Create'), `${projectName}/values/example/message.json`);
   console.log(chalk.green('Create'), `${projectName}/.gitignore`);
   console.log(chalk.green('Create'), `${projectName}/application.config.json`);
   console.log(chalk.green('Create'), `${projectName}/main.ts`);
